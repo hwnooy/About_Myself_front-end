@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round&display=swap');
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+a, a:link, a:visited {
+    color : inherit;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+.container{
+    width : 1140px;
+    margin : 0 auto;
+}
+
+header{
+    position: absolute;
+    color:black;
+    top:0;
+    z-index:1;  /*스크롤했을때 요소밑에 가려서 안 보이는 일이 없게 0보다 크게 */
+    width:100%;
+    padding: 1rem;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between; /* 주축설정시, 플렉스 아이템간 간격 */
+    align-items: center;
+    width:100%;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li {
+    padding :10px;
+}
+
+header button{
+    background: transparent; /*투명, 글씨 눌렀을 때 눌러지게*/
+    border:0;
+    cursor: pointer;  /* 어떤 거지 */
+}
+
+header h1 button{
+    font-size: 2rem; /* html 태그의 텍스트 크기에 상대적인 크기 */
+    font-weight : bold;
+}
+
+header nav ul li button{
+    font-size:1.2rem;   /* nav를 쓰는게 링크..*/
+}
+
+main{
+    width:100%;
+    height:100vh;
+    color:black;
+    background:linear-gradient(rbga(0,0,0,0.8), rbga(0,0,0,0.8)), center center; 
+    background-image : url("image.png");
+    /* 배경색이 이미지를 덮는 효과를 줌.*/
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+}
+
+main h4{
+    font-size:2rem;
+}
+
+main h2{
+    font-size:3.5rem;
+    margin:2rem 0;
+    letter-spacing: 3px;
+}
+
+main p{
+    max-width:500px;
+    margin: 0 auto;
+    font-size:1.25rem;
+}
+
+main button.download{
+    background-color: transparent;
+    border:3px solid black;
+    border-radius: 20px;
+    padding : 1rem 2rem;
+    margin-top:3rem;
+    color:black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main button.mouse{
+    background-color: transparent;
+    border:none;
+    color:black;
+    font-size:2rem;
+    position:absolute;
+    bottom:1rem;
+    left:50%;
+    transform:translateX(-50%);
+    animation:upDown 1s ease-in-out infinite;
+    cursor:pointer;
+}
+
+main h2 span::after{
+    content:"";
+    height:40px;
+    width:3px;
+    background-color: black;
+    display: inline-block;
+    animation: blink .7s ease-in-out infinite;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+section{
+    font-family: "Poppins", sans-serif;
+    padding:5rem 0;
+}
+
+section:nth-child(2n){
+    background-color: #f8f8f8;
+}
+
+section .title{
+    margin-bottom:3rem;
+}
+
+section .title h4{
+    font-size:1.35rem;
+    color:#ed4848;
+    position:relative;
+}
+
+section .title h2{
+    font-size:3.5rem;    
+}
+
+section .title p{
+    font-size:1.15rem;
+}
+
+/* float로 분할하려고 하는데 먼저 float 속성을 해제해야함. */
+section .about-self::after{
+    content:"";
+    clear:both;
+    display: block;
+}
+
+/* 본문너비 절반을 왼쪽에 배치 */
+section .about-self .left{
+    width:50%;
+    float:left;
+}
+
+section .about-self .left img{
+    max-width: 100%;
+}
+
+section .about-self .right{
+    width:50%;
+    float:left; /* 이것이 left인 이유는? */
+    padding : 0 2rem;
+}
+
+section .about-self .right h3{
+    font-size:2.25rem;
+    margin-bottom: 1rem;
+}
+
+section .about-self .right h3 strong{
+    color:#ed4848;
+}
+
+section .about-self .right p{
+    font-size:1.15rem;
+    margin:1rem; /* 뭔가 테두리관련 여백 */
+}
+
+section .about-self .right .social a{
+    font-size: 2.5rem;
+    margin-right:0.2rem;
+}
+
+section .do-me::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+section .do-me .do-inner{
+    background-color: #fff;
+    width:30%;
+    padding:2rem;
+    float:left;
+    margin-right: 5%;
+    cursor:pointer; 
+}
+
+section .do-me .do-inner .content p{
+    font-size: 1.15rem;
+}
+
+section .do-me .do-inner:hover{
+    background-color: lightcoral;
+}
+
+section .do-me .do-inner:hover i{
+    color:white;
+}
+
+.bg{
+    background:url("backgr.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    height:650px;
+}
+
+section.contact .contact-me::after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+  section.contact .contact-me .left{
+    width:30%;
+    float:left;
+  }
+  section.contact .contact-me .right{
+    float:left;
+    width:65%;
+    margin-left:5%;
+  }
+  section.contact .contact-me .left .card{
+    border:1px solid #ccc;
+    padding:1rem;
+    display:flex;
+    align-items:center;
+    margin-bottom:1.25rem;
+  }
+  section.contact .contact-me .left .card .icon i{
+    font-size:2rem;
+    margin-right:5px;
+  }
+  section.contact .contact-me .right{ 
+    float:left;
+    width:65%;
+    margin-left:5%;
+    margin-bottom:2rem;
+    border:1px solid #ccc;
+    padding:1rem;
+  }
+  /* form-group 사이 간격 지정 */
+  section.contact .contact-me .right .form-group{
+    margin-bottom:1.25rem;
+  }
+  /* label */
+  section.contact .contact-me .right .form-group label{
+    display:block;
+    margin-bottom:0.85rem;
+  }
+  /* input 요소 꾸미기 */
+  section.contact .contact-me .right .form-group input{
+    padding:0.625rem;
+    width:100%;
+    outline:none;
+    border:1px solid #ccc;
+    border-radius:10px;
+  }
+  /* :focus 가상 클래스 선택자로 입력 요소에 커서가 활성화되면 파란색 테두리와 그림자 효과 추가 */ 
+  section.contact .contact-me .right .form-group input:focus{
+    border:1px solid #719ECE;
+    box-shadow:0 0 10px #719ECE;
+  }
+
+  section.contact .contact-me .right .form-group textarea{
+    height:300px;
+    width:100%;
+    resize:none;
+    border:1px solid #ccc;
+    border-radius:10px;
+  }
+ 
+  section.contact .contact-me .right .form-group textarea:focus{
+    outline:none;
+    border:1px solid #719ECE;
+    box-shadow:0 0 10px #719ECE;
+  }
+
+  section.contact .contact-me .right button{
+    width:100%;
+    padding:1rem;
+    background-color:#f78b00;
+    border:none;
+    color:white;
+  }
+  
