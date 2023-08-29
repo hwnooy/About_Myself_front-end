@@ -5,21 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Project</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>
-                <button>My Story</button>
+                <button data-animation-scroll="true" data-target="#main">My Story</button>
             </h1>
             <nav>
                 <ul>
-                    <li><button>About</button></li>
-                    <li><button>Feature</button></li>
-                    <li><button>Portfolio</button></li>    
-                    <li><button>Contact</button></li>    
+                    <li><button data-animation-scroll="true" data-target="#about">About</button></li>
+                    <li><button data-animation-scroll="true" data-target="#feature">Feature</button></li>
+                    <li><button data-animation-scroll="true" data-target="#portfolio">Portfolio</button></li>    
+                    <li><button data-animation-scroll="true" data-target="#contact">Contact</button></li>    
                 </ul>
             </nav>
         </div>
@@ -27,10 +27,8 @@
     <main id="main">
         <div class="container">
             <h4>Welcome</h4>
-            <h2>I'm a <span>Front-End developer</span></h2>
+            <h2>I'm a <span></span></h2>
             <p>welcome to "My Story" Web Site. Have a good day</p>
-            <button class="download">Download CV</button>
-            <button class="mouse"><i class="fa-solid fa-computer-mouse"></i></button>
         </div>
     </main>
 
@@ -56,12 +54,13 @@
                     </p>
                 
 
-                    <div class="social">
+                    <!-- <div class="social">
                         <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
                         <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
                         <a href="#"> <i class="fa-brands fa-twitch"></i> </a>
                         <a href="#"> <i class="fa-brands fa-youtube"></i> </a>
-                    </div>
+                    </div> -->
+
                 </div>    
             </div>
         </div>
@@ -75,91 +74,158 @@
             </div>
 
             <div class="do-me">
-                <div class="do-inner">
-                    <div class="icon">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-bootstrap"></i>
+
+                <div class="do-inner"> <!-- do-inner가 사각형 하나를 나타내는 것.   -->
+                    <div class="content">
+                        <h3>Front-End</h3>
+                        <p>Learn to know about Front-End first. <br> I think FE knowledge is necessary to understand BE</p>
                     </div>
+                </div>
+                
+                <div class="do-inner">
 
                     <div class="content">
-                        <h3>HTML/CSS/Javascript</h3>
-                        <p>Learn to know about Front-End first. <br> I think FE knowledge is necessary to understand BE</p>
-
                         <h3>Java</h3>
                         <p>Because Java is the base language og BackEnd field, I am trying to get used to it too. </p>
-
+                    </div>    
+                </div>
+                            
+                <div class="do-inner">
+                    <div class="icon">
+                        <i class="fa-brands fa-bootstrap"></i>
+                    </div>
+                    <div class="content">
                         <h3>Spring Boot3</h3>
                         <p>After I fininsh FE curriculum, I will study Spring too. </p>
                     </div>
                 </div>
+                
+                <div class="do-inner">
+                    <div class="icon">
+                        <i class="fa-brands fa-bootstrap"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Server&DB</h3>
+                        <p>Important in BackEnd</p>
+                    </div>
+                </div>      
             </div>
         </div>
     </section>
 
     <div class="bg"></div>
 
-    <section>
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="title">
                 <h4>Protfolio Back</h4>
                 <h2>Portfolio</h2>
+            </div>
+
+            <div class="portfolio-me">
+                <div class="portfolio-inner">
+                    <a href="https://github.com/hwnooy/recommend-clothes-styling"><img src="port1.jpg"></a>
+                    <strong>Front-End1</strong>
+                    <h3>First WEB Project</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <a href="https://github.com/hwnooy/About_Myself_front-end"><img src="port2.jpg"></a>
+                    <strong>Front-End2</strong>
+                    <h3>Clone Website plus my style</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <a href="https://github.com/hwnooy/BOJ_Algorithm_Practice"><img src="port3.jpg"></a>
+                    <strong>Algorithm</strong>
+                    <h3>keep doing hard practicing BOJ.</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <a href="https://github.com/hwnooy/SpringBoot3"><img src="port4.jpg"></a>
+                    <strong>SpringBoot3</strong>
+                    <h3>I started studying spring recently.</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <a href="https://daywnme.tistory.com/"><img src="port5.jpg"></a>
+                    <strong>Record</strong>
+                    <h3>My TechBlog</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <a href="https://github.com/hwnooy"><img src="port6.jpg"></a>
+                    <strong>Github</strong>
+                    <h3>Welcome to My Github</h3>
+                </div>
+
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-          <div class="title">
-            <h4>CONTACT</h4>
-            <h2>Contact With Me</h2>
-          </div>
-          <div class="contact-me">
-            <div class="left">
-              <div class="card">
-                <div class="icon">
-                  <i class="fa-solid fa-phone-volume"></i>
-                </div>
-                <div class="info-text">
-                  <h3>phone</h3>
-                  <p>010-2222-1111</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="icon">
-                  <i class="fa-solid fa-envelope-open-text"></i>
-                </div>
-                <div class="info-text">
-                  <h3>email</h3>
-                  <p>sucoding@naver.com</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="icon">
-                  <i class="fa-solid fa-location-crosshairs"></i>
-                </div>
-                <div class="info-text">
-                  <h3>address</h3>
-                  <p>Samseong-ro, Gangnam-gu, Seoul, Republic of Korea</p>
-                </div>
-              </div>
+            <div class="title">
+                <h4>Contact</h4>
+                <h2>Contact With Me</h2>
             </div>
-            <div class="right">
-              <form action="#">
-                <div class="form-group">
-                  <label for="name">name</label>
-                  <input type="text" id="name">
+
+            <div class="contact-me">
+                <div class="left">
+
+                    <div class="card">
+
+                        <div class="info-text">
+                            <h3>phone</h3>
+                            <p>010-0000-0000</p>
+                        </div>
+
+                    </div>    
+                        
+                    <div class="card">
+
+                        <div class="info-text">
+                            <h3>email</h3>
+                            <p>hjwnny@naver.com (not real)</p>
+                        </div>
+
+                    </div>
+                        
+                    <div class="card">
+
+                        <div class="icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                        </div>
+
+                        <div class="info-text">
+                            <h3>address</h3>
+                            <p>Korea, Seoul</p>
+                        </div>  
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="email">email</label>
-                  <input type="text" id="email">
+
+
+                <div class="right">
+                    <form action="#">  <!--여긴 백엔드 공부하고 발전시켜서 하기 -->
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input type="text" id="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="text" id="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="msg">message</label>
+                            <textarea id="msg"></textarea>
+                        </div>
+
+                        <button type="submit">send</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                  <label for="msg">message</label>
-                  <textarea id="msg"></textarea>
-                </div>
-                <button>send</button>
-                </div>
+                
             </div>
         </div>
 
